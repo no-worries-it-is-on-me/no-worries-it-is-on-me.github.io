@@ -1,0 +1,129 @@
+/* Evening — design-system tokens and component classes.
+   Replaces the vendored "Modernist" sheet with a calmer direction:
+   warm paper ground, warm ink, the brand red #ec3013 used sparingly,
+   rounded surfaces and almost no rules. Keeps Modernist's class names (.btn, .tag, .input,
+   .nav, .card …) so markup stays portable. */
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-bg: #f7f5f0;          /* warm paper */
+  --color-surface: #ffffff;     /* cards */
+  --color-tint: #efece4;        /* warm panel */
+  --color-soft: #fdefeb;        /* red-tint panel */
+  --color-night: #201e1d;       /* ink, and the dark "night" surfaces */
+  --color-text: #201e1d;
+  --color-text-muted: #55504d;
+  --color-text-subtle: #7a7370;
+  --color-accent: #ec3013;
+  --color-divider: color-mix(in srgb, #201e1d 10%, transparent);
+
+  --color-accent-100: #fff2ef;
+  --color-accent-200: #ffe0d9;
+  --color-accent-300: #ffc4b8;
+  --color-accent-400: #ff9783;
+  --color-accent-500: #ec3013;
+  --color-accent-600: #d42a10;
+  --color-accent-700: #ae1800;
+  --color-accent-800: #7c1405;
+
+  --font-heading: "Onest", system-ui, -apple-system, sans-serif;
+  --font-heading-weight: 700;
+  --font-body: "Onest", system-ui, -apple-system, sans-serif;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  --shadow-sm: 0 1px 2px color-mix(in srgb, #201e1d 6%, transparent);
+  --shadow-md: 0 1px 2px color-mix(in srgb, #201e1d 5%, transparent),
+               0 8px 24px color-mix(in srgb, #201e1d 7%, transparent);
+  --shadow-lg: 0 2px 4px color-mix(in srgb, #201e1d 6%, transparent),
+               0 24px 48px color-mix(in srgb, #201e1d 12%, transparent);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  margin: 0 0 var(--space-3);
+}
+p { margin: 0 0 var(--space-3); }
+a { color: var(--color-accent-700); text-underline-offset: 3px; }
+a:hover { color: var(--color-accent-800); }
+img { display: block; max-width: 100%; }
+:focus { outline: none; }
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; border-radius: 4px; }
+::selection { background: var(--color-accent-200); }
+
+/* — buttons — */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  cursor: pointer; text-decoration: none;
+  font-family: var(--font-body); font-weight: 600;
+  font-size: 15px; line-height: 1.2; color: var(--color-text);
+  background: transparent; border: 1px solid transparent;
+  padding: 12px 22px;
+  border-radius: 999px;
+  transition: background-color .15s ease, color .15s ease, border-color .15s ease, transform .15s ease;
+}
+.btn svg { display: block; width: 18px; height: 18px; }
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn-primary { background: var(--color-accent); color: #fff; }
+.btn-primary:hover { background: var(--color-accent-600); color: #fff; }
+.btn-primary:active { background: var(--color-accent-700); }
+.btn-secondary { border-color: color-mix(in srgb, var(--color-text) 16%, transparent); background: var(--color-surface); }
+.btn-secondary:hover { border-color: color-mix(in srgb, var(--color-text) 28%, transparent); color: var(--color-text); }
+.btn-ghost { color: var(--color-accent-700); padding-inline: 4px; }
+.btn-ghost:hover { color: var(--color-accent-800); }
+.btn-block { width: 100%; justify-content: center; }
+
+/* — forms — */
+.input {
+  width: 100%; min-height: 48px; padding: 10px 20px; font: inherit;
+  font-size: 16px; color: var(--color-text); caret-color: var(--color-accent);
+  background: var(--color-surface);
+  border: 1px solid var(--color-divider); border-radius: 999px;
+}
+.input::placeholder { color: var(--color-text-subtle); }
+.input:focus-visible { border-color: var(--color-accent); outline-offset: 0; }
+
+/* — cards — */
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* — tags — */
+.tag {
+  display: inline-flex; align-items: center; font-size: 12px; font-weight: 600;
+  padding: 4px 10px; border-radius: 999px;
+}
+.tag-accent { background: var(--color-accent-100); color: var(--color-accent-700); }
+
+/* — navigation — */
+.nav { display: flex; align-items: center; gap: var(--space-6); }
+.nav-brand { margin-right: auto; }
+.nav a { color: var(--color-text-muted); text-decoration: none; font-size: 15px; }
+.nav a:hover { color: var(--color-text); }

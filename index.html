@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Don't Worry, It's On Me — bots that answer your customers after hours</title>
+<meta name="description" content="Tired of answering messages at 11pm? We build a bot from your website in minutes. It answers routine questions on Telegram, WhatsApp, Instagram and your site, collects the details, and hands the real conversations to you.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tired of answering at 11pm? Don't worry, it's on me.">
+<meta property="og:description" content="Bots for clinics, salons and small businesses. Always on, never pretending to be you — they answer, collect the details and hand over to a human.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f7f5f2">
+<!-- favicon: below 24px the mark drops to a single D, flush lower-left -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%23ec3013'/%3E%3Ctext x='2.5' y='13.5' font-family='Georgia,serif' font-weight='700' font-size='11' fill='%23ffffff'%3ED%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/design-system.css">
+<link rel="stylesheet" href="css/landing.css">
+<!-- Language: English lives in this file; uk / es / kk come from i18n.js.
+     Loaded synchronously so the page is hidden until the right language is in. -->
+<script src="js/i18n.js"></script>
+</head>
+<body>
+
+<!-- Pricing: $100 / month, no discount. Change the .price-value spots below
+     and in js/i18n.js (facts.price).
+     TODO: replace the placeholder t.me/ and mailto: links with real ones. -->
+
+<header class="site-header">
+  <nav class="nav shell">
+    <a class="nav-brand brand" href="#top" aria-label="Don't Worry, It's On Me">
+      <span class="mark" aria-hidden="true">DW</span>
+      <span class="brand__name">Don't Worry, It's On Me</span>
+    </a>
+    <a class="nav__link" href="#how" data-i18n="nav.how">How it works</a>
+    <a class="nav__link" href="#channels" data-i18n="nav.channels">Channels</a>
+    <a class="nav__link" href="#pricing" data-i18n="nav.pricing">Pricing</a>
+
+    <details class="lang" data-lang-switch>
+      <summary class="lang__toggle" aria-label="Language" data-i18n-attr="aria-label:lang.aria">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+        <span data-lang-current>EN</span>
+        <svg class="lang__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </summary>
+      <ul class="lang__menu">
+        <li><button type="button" data-set-lang="en" lang="en">English</button></li>
+        <li><button type="button" data-set-lang="uk" lang="uk">Українська</button></li>
+        <li><button type="button" data-set-lang="es" lang="es">Español</button></li>
+        <li><button type="button" data-set-lang="kk" lang="kk">Қазақша</button></li>
+      </ul>
+    </details>
+
+    <a class="btn btn-primary nav__cta" href="#start" data-i18n="nav.cta">Set up your bot</a>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- ── hero ──────────────────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="shell hero__grid">
+    <div class="hero__main">
+      <p class="eyebrow" data-i18n="hero.eyebrow">For clinics, salons and every business with an inbox</p>
+      <h1 class="hero__title" data-i18n="hero.title">Tired of answering at&nbsp;11pm? <em>Don't worry, it's on me.</em></h1>
+      <p class="hero__lead" data-i18n="hero.lead">Give us your website and in minutes a bot answers your customers on Telegram, WhatsApp, Instagram and your site &mdash; then hands you everything it learned.</p>
+      <div class="hero__actions">
+        <a class="btn btn-primary" href="#start" data-i18n="hero.cta1">Set up your bot</a>
+        <a class="btn btn-secondary" href="https://t.me/" target="_blank" rel="noopener" data-i18n="hero.cta2">Try it on Telegram</a>
+      </div>
+      <ul class="facts">
+        <li data-i18n="facts.setup"><strong>Minutes</strong> to set up</li>
+        <li data-i18n="facts.shift"><strong>24/7</strong> on shift</li>
+        <li data-i18n="facts.channels"><strong>4</strong> channels</li>
+        <li data-i18n="facts.price"><strong><span class="price-value">$100</span></strong> a month</li>
+      </ul>
+    </div>
+
+    <aside class="night" aria-label="Example: a message answered at night" data-i18n-attr="aria-label:night.aria">
+      <div class="night__head">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        <span>23:04 &middot; Instagram</span>
+      </div>
+      <p class="bubble bubble--them" data-i18n="night.b1">Anything free on Saturday morning?</p>
+      <p class="bubble bubble--bot" data-i18n="night.b2">Yes &mdash; 10:00 or 11:30 with Anna. Shall I hold one for you?</p>
+      <p class="bubble bubble--them" data-i18n="night.b3">10:00 please!</p>
+      <ul class="night__done">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="night.d1">Answered in 4 seconds</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="night.d2">Slot held, details collected</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="night.d3">In your summary at 8:00</span></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- ── when they write ───────────────────────────────────────────────── -->
+<section class="section">
+  <div class="shell">
+    <header class="section__head">
+      <p class="eyebrow" data-i18n="when.eyebrow">When they write</p>
+      <h2 class="section__title" data-i18n="when.title">Your customers don't keep office hours.</h2>
+    </header>
+    <ol class="clock">
+      <li class="clock__cell">
+        <span class="clock__time">07:12</span>
+        <span class="clock__when" data-i18n="when.c1.when">Before you open</span>
+        <p class="clock__msg" data-i18n="when.c1.msg">&ldquo;Are you open today? Can I just walk in?&rdquo;</p>
+      </li>
+      <li class="clock__cell">
+        <span class="clock__time">13:40</span>
+        <span class="clock__when" data-i18n="when.c2.when">You're with a client</span>
+        <p class="clock__msg" data-i18n="when.c2.msg">&ldquo;How much is a hygienist visit?&rdquo;</p>
+      </li>
+      <li class="clock__cell clock__cell--night">
+        <span class="clock__time">23:04</span>
+        <span class="clock__when" data-i18n="when.c3.when">You're finally off</span>
+        <p class="clock__msg" data-i18n="when.c3.msg">&ldquo;Anything free on Saturday morning?&rdquo;</p>
+      </li>
+      <li class="clock__cell">
+        <span class="clock__time" data-i18n="when.c4.time">Sun 10:15</span>
+        <span class="clock__when" data-i18n="when.c4.when">Your day off</span>
+        <p class="clock__msg" data-i18n="when.c4.msg">&ldquo;I need to move my Tuesday booking.&rdquo;</p>
+      </li>
+    </ol>
+    <p class="clock__foot" data-i18n="when.foot">Each one gets an answer in seconds. None of them needs you to pick up the phone.</p>
+  </div>
+</section>
+
+<!-- ── help, not a replacement ───────────────────────────────────────── -->
+<section class="section section--tint" id="role">
+  <div class="shell split">
+    <div>
+      <p class="eyebrow" data-i18n="role.eyebrow">Help, not a replacement</p>
+      <h2 class="section__title" data-i18n="role.title">It takes the night shift. You're still the one they came for.</h2>
+      <p class="section__lead" data-i18n="role.lead">The bot doesn't do your job. It does the part that keeps you on your phone &mdash; the prices, the hours, the &ldquo;do you have a slot&rdquo; &mdash; and gets everything ready for the moment a person is needed. That person is you.</p>
+    </div>
+    <ul class="features">
+      <li>
+        <span class="features__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span>
+        <div><h3 data-i18n="role.f1.h">Answers the routine</h3><p data-i18n="role.f1.p">Prices, opening hours, directions, what to bring &mdash; straight from your own website.</p></div>
+      </li>
+      <li>
+        <span class="features__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15.5 3H5a2 2 0 0 0-2 2v14c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2V8.5L15.5 3Z"/><path d="M15 3v6h6"/><path d="M8 13h8"/><path d="M8 17h5"/></svg></span>
+        <div><h3 data-i18n="role.f2.h">Collects the details</h3><p data-i18n="role.f2.p">Name, contact, what they need, when suits them. You get a tidy summary, not a thread.</p></div>
+      </li>
+      <li>
+        <span class="features__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0v6"/><path d="M4 14h4v6H4z"/><path d="M16 14h4v6h-4z"/></svg></span>
+        <div><h3 data-i18n="role.f3.h">Hands over to a human</h3><p data-i18n="role.f3.p">Anything medical, personal or unsure goes to you &mdash; with the context already written down.</p></div>
+      </li>
+      <li>
+        <span class="features__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></span>
+        <div><h3 data-i18n="role.f4.h">Never pretends</h3><p data-i18n="role.f4.p">It says it's your assistant, and it only says what you've told it.</p></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── demo: night chat + morning summary ────────────────────────────── -->
+<section class="section">
+  <div class="shell demo">
+    <div class="demo__copy">
+      <p class="eyebrow" data-i18n="demo.eyebrow">What happens overnight</p>
+      <h2 class="section__title" data-i18n="demo.title">They book at 23:14. You read one summary at 8:00.</h2>
+      <p class="section__lead" data-i18n="demo.lead">The bot answers like someone who works there, because it only knows what you gave it. Then it writes up what matters, so you can confirm, call back or say no in one tap.</p>
+      <a class="btn btn-secondary" href="https://t.me/" target="_blank" rel="noopener" data-i18n="demo.cta">Talk to our bot yourself</a>
+    </div>
+
+    <div class="demo__stage">
+      <div class="chat">
+        <div class="chat__header">
+          <span class="chat__avatar" aria-hidden="true">N</span>
+          <span>
+            <span class="chat__brand">Northside Hair Studio</span>
+            <span class="chat__status">Instagram &middot; 23:14</span>
+          </span>
+        </div>
+        <ul class="chat__log">
+          <li class="chat__msg chat__msg--out" data-i18n="chat.m1">Hi! Anything for balayage this Saturday?</li>
+          <li class="chat__msg chat__msg--in" data-i18n="chat.m2">Hi! Balayage starts at $140 and takes about 3 hours. Saturday has 10:00 or 13:30. Which suits you?</li>
+          <li class="chat__msg chat__msg--out" data-i18n="chat.m3">10am. First time, my hair is quite dark</li>
+          <li class="chat__msg chat__msg--in" data-i18n="chat.m4">Noted &mdash; I'll tell Anna so she can plan the colour. Can I take a name and number to hold the slot?</li>
+          <li class="chat__msg chat__msg--out" data-i18n="chat.m5">Mia, 555 0142</li>
+          <li class="chat__msg chat__msg--in" data-i18n="chat.m6">Thanks Mia! Saturday 10:00 is held &mdash; Anna will confirm first thing in the morning.</li>
+        </ul>
+      </div>
+
+      <article class="brief" aria-label="Morning summary example" data-i18n-attr="aria-label:brief.aria">
+        <header class="brief__head">
+          <span class="brief__kicker" data-i18n="brief.kicker">08:00 &middot; For Anna</span>
+          <span class="tag tag-accent" data-i18n="brief.tag">Needs you</span>
+        </header>
+        <dl class="brief__rows">
+          <div><dt data-i18n="brief.who">Who</dt><dd data-i18n="brief.who.v">Mia &middot; 555 0142</dd></div>
+          <div><dt data-i18n="brief.wants">Wants</dt><dd data-i18n="brief.wants.v">Balayage, first time</dd></div>
+          <div><dt data-i18n="brief.when">When</dt><dd data-i18n="brief.when.v">Sat 10:00 &mdash; held</dd></div>
+          <div><dt data-i18n="brief.note">Note</dt><dd data-i18n="brief.note.v">Dark hair, plan the colour</dd></div>
+        </dl>
+        <p class="brief__more" data-i18n="brief.more">+ 7 more answered overnight &mdash; prices, hours, parking. Nothing else needs you.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── how it works ──────────────────────────────────────────────────── -->
+<section class="section section--tint" id="how">
+  <div class="shell">
+    <header class="section__head">
+      <p class="eyebrow" data-i18n="how.eyebrow">How it works</p>
+      <h2 class="section__title" data-i18n="how.title">Live in minutes, not weeks.</h2>
+    </header>
+    <ol class="steps">
+      <li class="step">
+        <span class="step__num">1</span>
+        <h3 data-i18n="how.s1.h">Give us your website</h3>
+        <p data-i18n="how.s1.p">One link is enough. We read your services, prices, hours and policies off your own pages. No knowledge base to write.</p>
+      </li>
+      <li class="step">
+        <span class="step__num">2</span>
+        <h3 data-i18n="how.s2.h">Pick where it answers</h3>
+        <p data-i18n="how.s2.p">Telegram, WhatsApp, Instagram, a chat box on your site &mdash; or all four. One bot, same answers everywhere.</p>
+      </li>
+      <li class="step">
+        <span class="step__num">3</span>
+        <h3 data-i18n="how.s3.h">Say when to call you in</h3>
+        <p data-i18n="how.s3.p">Tell us in plain words what it should collect and when a person takes over. We build it in, free.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ── channels ──────────────────────────────────────────────────────── -->
+<section class="section" id="channels">
+  <div class="shell">
+    <header class="section__head">
+      <p class="eyebrow" data-i18n="ch.eyebrow">Channels</p>
+      <h2 class="section__title" data-i18n="ch.title">One bot, wherever they message you.</h2>
+    </header>
+    <ul class="channels">
+      <li class="channel">
+        <span class="channel__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg></span>
+        <h3>Telegram</h3>
+        <p data-i18n="ch.1.p">A bot with your name that customers can find, share and come back to.</p>
+      </li>
+      <li class="channel">
+        <span class="channel__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg></span>
+        <h3>WhatsApp</h3>
+        <p data-i18n="ch.2.p">Answers on the number your customers already have saved.</p>
+      </li>
+      <li class="channel">
+        <span class="channel__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></span>
+        <h3 data-i18n="ch.3.name">Instagram DMs</h3>
+        <p data-i18n="ch.3.p">Turns &ldquo;how much?&rdquo; under your posts into bookings, not missed replies.</p>
+      </li>
+      <li class="channel">
+        <span class="channel__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+        <h3 data-i18n="ch.4.name">Website chat</h3>
+        <p data-i18n="ch.4.p">One line of code puts the same bot in the corner of your site.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── security ──────────────────────────────────────────────────────── -->
+<section class="section section--tint" id="security">
+  <div class="shell split">
+    <div>
+      <p class="eyebrow" data-i18n="sec.eyebrow">Privacy</p>
+      <h2 class="section__title" data-i18n="sec.title">One bot. One environment. One business.</h2>
+      <p class="section__lead" data-i18n="sec.lead">Client names, appointment notes and phone numbers are not things you want in a shared pile. Your bot gets its own environment and its own data.</p>
+    </div>
+    <ul class="checks">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="sec.c1"><strong>Nothing crosses over.</strong> Your records are never a question away from another business's bot.</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="sec.c2"><strong>Your data stays yours.</strong> Nothing you give us trains a shared model.</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="sec.c3"><strong>Delete means delete.</strong> Close the account and the environment goes with it.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── pricing ───────────────────────────────────────────────────────── -->
+<section class="section" id="pricing">
+  <div class="shell">
+    <header class="section__head">
+      <p class="eyebrow" data-i18n="price.eyebrow">Pricing</p>
+      <h2 class="section__title" data-i18n="price.title">One simple plan.</h2>
+    </header>
+    <div class="plan card">
+      <div class="plan__main">
+        <p class="price">
+          <span class="price__amount price-value">$100</span>
+          <span class="price__period" data-i18n="price.period">per month</span>
+        </p>
+        <p class="plan__note" data-i18n="price.note">Billed monthly. No contract, no setup fee, no per-message charges. Less than one missed booking a week.</p>
+        <a class="btn btn-primary" href="#start" data-i18n="price.cta">Set up your bot</a>
+      </div>
+      <ul class="checks plan__list">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="price.i1">All four channels &mdash; Telegram, WhatsApp, Instagram, website</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="price.i2">Unlimited conversations, day and night</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="price.i3">Customer details collected and summarised for you</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="price.i4">Hand-off to a human, built around how you work</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="price.i5">Website and prices kept in step with the bot</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="price.i6">A real person to write to when something needs changing</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── faq ───────────────────────────────────────────────────────────── -->
+<section class="section" id="faq">
+  <div class="shell">
+    <header class="section__head">
+      <p class="eyebrow" data-i18n="faq.eyebrow">Questions</p>
+      <h2 class="section__title" data-i18n="faq.title">Things people ask us.</h2>
+    </header>
+    <div class="faq">
+      <details>
+        <summary data-i18n="faq.q1">Will it replace my receptionist?</summary>
+        <p data-i18n="faq.a1">No. It covers the hours nobody is at the desk and the questions nobody should have to answer twenty times a day. Your team gets fewer interruptions and better-prepared customers.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q2">What if it doesn't know the answer?</summary>
+        <p data-i18n="faq.a2">It says so, takes the customer's details and passes the conversation to you. It never makes up a price, a slot or a diagnosis.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q3">Will customers know they're talking to a bot?</summary>
+        <p data-i18n="faq.a3">Yes &mdash; it introduces itself as your assistant. People don't mind a bot; they mind waiting until morning for &ldquo;yes, we're open Saturday&rdquo;.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q4">I'm not a clinic or a salon. Does it still work?</summary>
+        <p data-i18n="faq.a4">If customers message you with questions before they buy or book, it works. Clinics and salons are just where the 11pm messages pile up fastest.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q5">How long does setup really take?</summary>
+        <p data-i18n="faq.a5">A few minutes to a working bot from your website. If you want bookings, reminders or a row in your spreadsheet, tell us and we build it in at no extra cost.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ── closing CTA ───────────────────────────────────────────────────── -->
+<section class="cta-wrap" id="start">
+  <div class="shell">
+    <div class="cta">
+      <h2 class="cta__title" data-i18n="cta.title">Close the laptop. <em>It's on me.</em></h2>
+      <p class="cta__sub" data-i18n="cta.sub">Paste your website and have a bot answering in minutes &mdash; or book twenty minutes and we'll set it up together.</p>
+      <!-- TODO: point this form at the real sign-up endpoint -->
+      <form class="cta__form" action="#" method="post">
+        <input class="input" type="url" name="website" placeholder="yourbusiness.com" aria-label="Your website" required data-i18n-attr="placeholder:cta.placeholder;aria-label:cta.input">
+        <button type="submit" class="btn btn-primary" data-i18n="cta.button">Build my bot</button>
+      </form>
+      <p class="cta__alt">
+        <span data-i18n="cta.alt">Not ready yet?</span>
+        <a href="mailto:hello@example.com" data-i18n="cta.talk">Talk to us first</a><!-- TODO: real email -->
+        <span aria-hidden="true">&middot;</span>
+        <a href="https://t.me/" target="_blank" rel="noopener" data-i18n="cta.try">Try our bot on Telegram</a><!-- TODO: real bot handle -->
+      </p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="shell site-footer__inner">
+    <span class="brand">
+      <span class="mark mark--sm" aria-hidden="true">DW</span>
+      <span class="brand__name">Don't Worry, It's On Me</span>
+    </span>
+    <nav class="site-footer__links" aria-label="Footer" data-i18n-attr="aria-label:footer.aria">
+      <a href="#pricing" data-i18n="footer.pricing">Pricing</a>
+      <a href="#security" data-i18n="footer.privacy">Privacy</a>
+      <a href="#faq" data-i18n="footer.faq">FAQ</a>
+      <a href="#start" data-i18n="footer.contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
